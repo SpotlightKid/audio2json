@@ -92,7 +92,7 @@ Christopher Arndt ([@SpotlightKid](https://github.com/SpotlightKid))
 ## Acknowledgements
 
 This project was re-implemented in Nim using [beschulz/wav2json] as a model
-for the code structure. No original code was used. 
+for the code structure. No code from the aforementioned project is used.
 
 
 [beschulz/wav2json]: https://github.com/beschulz/wav2json

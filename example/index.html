@@ -5,9 +5,25 @@
   <title>audio2json & wavesurfer.js example</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <script type="module" src="waveform.js"></script>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 1rem 10%;
+    }
+    #waveform {
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-<div id="waveform" style="margin: 1rem 15%;">
+<div id="waveform">
   <!-- the waveform will be rendered here -->
 </div>
+<footer>
+  <em><a href="https://soundcloud.com/spotlight-kyd/on-the-tube">Spotlight Kyd - &ldquo;On the Tube&rdquo;</a></em> -
+  Made with <a href="https://codeberg.org/SpotlightKid/audio2json">audio2json</a> &amp;
+  <a href="https://wavesurfer.xyz/">wavesurfer.js</a>
+</footer>
 </body>
