@@ -4,7 +4,7 @@ Generate sample peak data in JSON format from audio files, which can be used
 with e.g. [wavesurfer.js].
 
 Implemented in [Nim] using the [sndfile] binding for libsndfile, so all audio
-file formates supported by libsndfile can be used as input.
+file formats supported by libsndfile can be used as input.
 
 
 ## Demo
@@ -57,7 +57,7 @@ Configuration:
   --db-max <dB>           maximum value of the signal in dB, that will be
                           visible in the waveform (default: 0).
                           Useful if the signal peaks at a certain level.
-  -o | --output <path>    name of output file, use "-" fro standard output.
+  -o | --output <path>    name of output file, use "-" for standard output.
                           (defaults to basename of input file and its extension
                           replaced with '.json')
   -n | --no-generator     Do not include the '_generator' key in the output

@@ -42,7 +42,7 @@ Configuration:
   --db-max <dB>           maximum value of the signal in dB, that will be
                           visible in the waveform (default: 0).
                           Useful if the signal peaks at a certain level.
-  -o | --output <path>    name of output file, use "-" fro standard output.
+  -o | --output <path>    name of output file, use "-" for standard output.
                           (defaults to basename of input file and its extension
                           replaced with '.json')
   -n | --no-generator     Do not include the '_generator' key in the output
