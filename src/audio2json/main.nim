@@ -20,11 +20,16 @@ proc noProgress(percent: int): bool =
   return true
 
 
+proc showVersion() =
+    echo &"{ProgName} version {Version}"
+
+
 ## Print command line help
 proc usageAndExit(exitCode: int = QuitSuccess) =
-  echo &"""{ProgName} version {Version}"
+  showVersion()
+  echo &"""
 
-usage: {ProgName} [options] input_file_name"
+usage: {ProgName} [options] input_file_name
 
 General options:
   -v | --version          print version string
@@ -32,7 +37,7 @@ General options:
 
 Configuration:
   -C | --channels <ch>    comma-separated list of channel identifiers which
-                          should computed and included in the output:
+                          should be computed and included in the output:
                           left, right, mid, side, min, max
                           (default: left, right)
   -d | --db-scale         use logarithmic (e.g. decibel) scale instead of
@@ -106,7 +111,7 @@ proc main() =
     usageAndExit()
 
   if opts.showVersion:
-    echo &"version: {Version}"
+    showVersion()
     quit QuitSuccess
 
   if opts.inputFileName.len == 0:

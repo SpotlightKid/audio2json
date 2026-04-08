@@ -47,7 +47,7 @@ General options:
 
 Configuration:
   -C | --channels <ch>    comma-separated list of channel identifiers which
-                          should computed and included in the output:
+                          should be computed and included in the output:
                           left, right, mid, side, min, max
                           (default: left, right)
   -d | --db-scale         use logarithmic (e.g. decibel) scale instead of
