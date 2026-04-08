@@ -1,5 +1,5 @@
 # nimble file for audio2json
-version       = "0.1.0"
+version       = "0.1.1"
 author        = "SpotlightKid"
 description   = "Generate sample peak data in JSON format from audio files."
 license       = "MIT"

@@ -7,7 +7,7 @@ import ./[types, peaks]
 
 const
   ProgName = "audio2json"
-  Version = "0.1.0"
+  Version = "0.1.1"
 
 
 # progress callback
