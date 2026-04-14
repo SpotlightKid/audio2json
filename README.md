@@ -42,32 +42,31 @@ Options:
 
 ```con
 General options:
-  -v | --version          print version string
-  -h | --help             print this help message and exit
+  -v | --version          Print version string
+  -h | --help             Print this help message and exit
 
 Configuration:
-  -C | --channels <ch>    comma-separated list of channel identifiers which
+  -C | --channels <ch>    Comma-separated list of channel identifiers which
                           should be computed and included in the output:
                           left, right, mid, side, min, max
                           (default: left, right)
-  -d | --db-scale         use logarithmic (e.g. decibel) scale instead of
-                          linear scale for peak values
-  --db-min <dB>           minimum value of the signal in dB, that will be
+  -d | --db-scale         Use logarithmic (e.g. decibel) scale instead of
+                          linear scale for peak values.
+  --db-min <dB>           Minimum value of the signal in dB, that will be
                           visible in the waveform (default: -48)
-  --db-max <dB>           maximum value of the signal in dB, that will be
-                          visible in the waveform (default: 0).
+  --db-max <dB>           Maximum value of the signal in dB, that will be
+                          visible in the waveform (default: 0)
                           Useful if the signal peaks at a certain level.
-  -o | --output <path>    name of output file, use "-" for standard output.
+  -o | --output <path>    Name of output file, use "-" for standard output
                           (defaults to basename of input file and its extension
                           replaced with '.json')
-  -n | --no-generator     Do not include the '_generator' key in the output
+  -n | --no-generator     Do not include the '_generator' key in the output.
   -q                      Do not report progress to standard error output.
-  -s | --samples <num>    number of samples to generate (default: 800)
-  -p | --precision <num>  precision (i.e. the number of digits after the comma)
+  -s | --samples <num>    Number of samples to generate (default: 800)
+  -p | --precision <num>  Precision (i.e. the number of digits after the comma)
                           of the floating point numbers in the output. Reducing
                           the precision yields smaller output files and 2 or 3
-                          is usually sufficient
-                          (1..9, default: 6)
+                          is usually sufficient (1..9, default: 6)
 ```
 
 Further examples:
