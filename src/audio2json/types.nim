@@ -8,7 +8,7 @@ type
 
   Options* = object
     samples* = 800
-    precision* = 9
+    precision* = 6
     dbMin* = -48.0
     dbMax* = 0.0
     channels*: ChannelNames = @[LEFT, RIGHT]
