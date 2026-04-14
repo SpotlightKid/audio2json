@@ -123,10 +123,10 @@ proc main() =
   let snd = open(opts.inputFileName.cstring, SFMode.READ, info.addr)
 
   if snd.isNil or error(snd) != 0:
-    stderr.writeLine("Error opening audio file '" & opts.inputFileName & "'")
+    stderr.writeLine(&"Error opening audio file '{opts.inputFileName}'")
 
     if not snd.isNil:
-      stderr.writeLine("Error was: " & $strError(snd))
+      stderr.writeLine(&"Error was: {strError(snd)}")
 
     quit 2
 
@@ -154,7 +154,7 @@ proc main() =
     try:
       outStream = newFileStream(opts.outputFileName, fmWrite)
     except OSError as e:
-      stderr.writeLine("Error: cannot open output file: " & e.msg)
+      stderr.writeLine(&"Error: cannot open output file: {e.msg}")
       quit 2
 
   let output = if useStdOut: newFileStream(stdout) else: outStream
