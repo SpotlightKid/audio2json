@@ -16,10 +16,6 @@ proc progressCallback(percent: int): bool =
   return true
 
 
-proc noProgress(percent: int): bool =
-  return true
-
-
 proc showVersion() =
     echo &"{ProgName} version {Version}"
 
@@ -167,18 +163,14 @@ proc main() =
   if not opts.noGenerator:
     output.writeLine(&"  \"_generator\": \"{ProgName} (Nim) version {Version}\",\n")
 
-  # Select progress callback according to quiet flag
-  var prog = if opts.quiet:
-      noProgress
-    else:
-      progressCallback
+  var progCb = if opts.quiet: nil else: progressCallback
 
   # compute waveform
   let data = computePeaks(snd, info, opts.samples, opts.channels,
-                          opts.useDbScale, opts.dbMin, opts.dbMax, prog)
+                          opts.useDbScale, opts.dbMin, opts.dbMax, progCb)
   output.writeJson(data, opts.channels, opts.precision)
 
-  # print duration with high precision
+  # Add duration with high precision
   let duration = float(info.frames) / float(info.samplerate)
   output.writeLine(&"  \"duration\": {formatFloat(duration, ffDecimal, 9)}")
   output.writeLine("}")

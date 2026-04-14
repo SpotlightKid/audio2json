@@ -100,7 +100,7 @@ proc computePeaks*(
       else:
         y = normalize(float(maxVal), 0.0, float(MaxShortValue))
 
-      if (x mod progressDivisor) == 0 and progressCallback != nil:
+      if progressCallback != nil and x mod progressDivisor == 0:
         if not progressCallback(100 * x div max(1, numSamples)):
           return
 
