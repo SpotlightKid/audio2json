@@ -49,12 +49,12 @@ proc getSample(samples: openArray[cshort], i, nChannels: int, ch: ChannelName): 
 proc computePeaks*(
   snd: ptr SndFile,
   info: var SFInfo,
-  samples: int,
-  channels: ChannelNames,
-  useDbScale: bool,
-  dbMin: float,
-  dbMax: float,
-  progressCallback: ProgressCallback
+  samples: int = 800,
+  channels: ChannelNames = @[LEFT, RIGHT],
+  useDbScale: bool = false,
+  dbMin: float = -48.0,
+  dbMax: float = 0.0,
+  progressCallback: ProgressCallback = nil
 ): seq[seq[float]] =
   # clamp samples to file frames
   var
